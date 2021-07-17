@@ -10,6 +10,9 @@ namespace MarsConsole
             // new MarsGrid
             var grid = new MarsGrid();
 
+            // add rover
+            grid.AddRover(5, 5);
+
             // display grid
             grid.DisplayMarsMapGrid();
 

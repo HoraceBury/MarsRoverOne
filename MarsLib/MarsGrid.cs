@@ -33,10 +33,12 @@ namespace MarsLib
             }
         }
 
-        public bool AddRover()
+        public bool AddRover(int x, int y)
         {
             // get current rover location
             // if not hasRover then add rover, return true
+            Grid[y][x] = new MarsRover();
+            
             // if hasRover then return false
             return false;
         }
