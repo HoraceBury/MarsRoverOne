@@ -38,14 +38,24 @@ namespace MarsLib
             // get current rover location
             // if not hasRover then add rover, return true
             Grid[y][x] = new MarsRover();
-            
+
             // if hasRover then return false
             return false;
         }
 
-        public bool AddBlock()
+        public bool AddBlock(int x, int y)
         {
             // set grid location to block
+            Grid[y][x] = new MarsBlock();
+            
+            return false;
+        }
+
+        public bool AddTarget(int x, int y)
+        {
+            // set grid location to block
+            Grid[y][x] = new MarsTarget();
+            
             return false;
         }
 

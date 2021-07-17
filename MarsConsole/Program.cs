@@ -13,6 +13,12 @@ namespace MarsConsole
             // add rover
             grid.AddRover(5, 5);
 
+            // add block
+            grid.AddBlock(7, 7);
+
+            // add target
+            grid.AddTarget(9, 9);
+
             // display grid
             grid.DisplayMarsMapGrid();
 
