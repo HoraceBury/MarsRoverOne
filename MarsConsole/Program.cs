@@ -23,7 +23,13 @@ namespace MarsConsole
             grid.DisplayMarsMapGrid();
 
             // loop
+            var keepRunning = true;
+
+            while (keepRunning)
+            {
                 // listen for input:
+                var key = Console.ReadKey();
+                
                     // q = quit
                     // m = add rover
                     // ↑↓→← = N/S/E/W
@@ -32,6 +38,10 @@ namespace MarsConsole
                     // g = go
                 // add item to map grid
                 // quit if required
+
+                // display grid
+                grid.DisplayMarsMapGrid();
+            }
         }
 
         // MarsLib.IGridItem
