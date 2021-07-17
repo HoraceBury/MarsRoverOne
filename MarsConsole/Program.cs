@@ -8,10 +8,10 @@ namespace MarsConsole
         static void Main(string[] args)
         {
             // new MarsGrid
-            var grid = new IGridItem[10,10];
+            var grid = new MarsGrid();
 
             // display grid
-            DisplayMarsMapGrid(grid);
+            grid.DisplayMarsMapGrid();
 
             // loop
                 // listen for input:
@@ -24,40 +24,6 @@ namespace MarsConsole
                 // add item to map grid
                 // quit if required
         }
-
-        // MarsLib.MarsGrid >>>
-        /*public static MarsGrid()
-        {
-            // create grid array
-        }*/
-
-        public static bool AddRover()
-        {
-            // get current rover location
-            // if not hasRover then add rover, return true
-            // if hasRover then return false
-            return false;
-        }
-
-        public static bool AddBlock()
-        {
-            // set grid location to block
-            return false;
-        }
-
-        public static void DisplayMarsMapGrid(IGridItem[,] grid)
-        {
-            // clear display
-            // set cursor to 0,0
-            // loop through rows
-                // loop through columns
-                    // render character:
-                        // empty = •
-                        // rover = □
-                        // block = #
-                        // target = ☻
-        }
-        // <<< MarsLib.MarsGrid
 
         // MarsLib.IGridItem
         // MarsLib.Rover
