@@ -29,19 +29,28 @@ namespace MarsConsole
             {
                 // listen for input:
                 var key = Console.ReadKey();
-                
+
+                switch (key.Key)
+                {
                     // q = quit
+                    case ConsoleKey.Q:
+                        keepRunning = false;
+                        break;
                     // m = add rover
                     // ↑↓→← = N/S/E/W
                     // b = block
                     // t = target
                     // g = go
+                }
+
                 // add item to map grid
                 // quit if required
 
                 // display grid
                 grid.DisplayMarsMapGrid();
             }
+
+            Console.WriteLine("Good bye!");
         }
 
         // MarsLib.IGridItem
