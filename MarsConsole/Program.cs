@@ -28,9 +28,9 @@ namespace MarsConsole
             while (keepRunning)
             {
                 // listen for input:
-                var key = Console.ReadKey();
+                var key = ListenForInput();
 
-                switch (key.Key)
+                switch (key)
                 {
                     // q = quit
                     case ConsoleKey.Q:
@@ -60,10 +60,13 @@ namespace MarsConsole
         // MarsLib.Empty
 
         // MarsLib.InputReader >>>
-        public void ListenForInput()
+        public static ConsoleKey ListenForInput()
         {
             // read key input
+            var key = Console.ReadKey();
+
             // return appropriate character
+            return key.Key;
         }
         // <<< MarsLib.InputReader
 
