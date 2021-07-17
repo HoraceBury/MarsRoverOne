@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace MarsLib
 {
@@ -7,7 +8,7 @@ namespace MarsLib
         public MarsGrid()
         {
             // create grid array
-            var grid = new IGridItem[10,10];
+            var grid = new List<List<IGridItem>>();
         }
 
         public bool AddRover()
