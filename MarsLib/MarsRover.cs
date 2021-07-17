@@ -12,7 +12,5 @@ namespace MarsLib
         public int Y { get ; set ; } = 0;
 
         public bool IsEmpty  { get; set ; } = true;
-
-
     }
 }

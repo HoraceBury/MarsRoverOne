@@ -1,14 +1,18 @@
 ﻿using System;
+using MarsLib;
 
 namespace MarsConsole
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             // new MarsGrid
+            var grid = new IGridItem[10,10];
+
             // display grid
+            DisplayMarsMapGrid(grid);
+
             // loop
                 // listen for input:
                     // q = quit
@@ -22,24 +26,26 @@ namespace MarsConsole
         }
 
         // MarsLib.MarsGrid >>>
-        public  MarsGrid()
+        /*public static MarsGrid()
         {
             // create grid array
-        }
+        }*/
 
-        public bool AddRover()
+        public static bool AddRover()
         {
             // get current rover location
             // if not hasRover then add rover, return true
             // if hasRover then return false
+            return false;
         }
 
-        public bool AddBlock()
+        public static bool AddBlock()
         {
             // set grid location to block
+            return false;
         }
 
-        public void DisplayMarsMapGrid()
+        public static void DisplayMarsMapGrid(IGridItem[,] grid)
         {
             // clear display
             // set cursor to 0,0
@@ -58,8 +64,6 @@ namespace MarsConsole
         // MarsLib.Block
         // MarsLib.Target
         // MarsLib.Empty
-
-
 
         // MarsLib.InputReader >>>
         public void ListenForInput()
