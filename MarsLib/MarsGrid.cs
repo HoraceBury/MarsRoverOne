@@ -73,24 +73,30 @@ namespace MarsLib
                 // loop through columns
                 for (var colIndex=0; colIndex<Grid[rowIndex].Count; colIndex++)
                 {
+                    // current grid item
+                    var item = Grid[rowIndex][colIndex];
+
+                    // colour to print with
+                    var colour = item.ToString() == "MarsLib.MarsEmpty" ? ConsoleColor.Gray : ConsoleColor.Red;
+
                     // render character:
-                    switch (Grid[rowIndex][colIndex].ToString())
+                    switch (item.ToString())
                     {
                         // empty = ☼
                         case "MarsLib.MarsEmpty":
-                            Console.Write("☼");
+                            Console.Write("☼", colour);
                             break;
                         // rover = @
                         case "MarsLib.MarsRover":
-                            Console.Write("@");
+                            Console.Write("@", colour);
                             break;
                         // block = #
                         case "MarsLib.MarsBlock":
-                            Console.Write("#");
+                            Console.Write("#", colour);
                             break;
                         // target = ☻
                         case "MarsLib.MarsTarget":
-                            Console.Write("☻");
+                            Console.Write("☻", colour);
                             break;
                     }
                 }
