@@ -2,8 +2,18 @@ using System;
 
 namespace MarsLib
 {
+    public enum FacingDirection
+    {
+        North,
+        South,
+        East,
+        West
+    }
+    
     public class MarsRover : IGridItem
     {
+        public FacingDirection Direction { get; set; } = FacingDirection.North;
+        
         public MarsRover()
         {
         }
