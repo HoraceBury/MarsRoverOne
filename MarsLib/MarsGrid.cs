@@ -76,11 +76,14 @@ namespace MarsLib
                     // current grid item
                     var item = Grid[rowIndex][colIndex];
 
+                    // get item type
+                    var itemType = item.GetType().ToString();
+
                     // colour to print with
-                    var colour = item.ToString() == "MarsLib.MarsEmpty" ? ConsoleColor.Gray : ConsoleColor.Red;
+                    var colour = itemType == "MarsLib.MarsEmpty" ? ConsoleColor.Gray : ConsoleColor.Red;
 
                     // render character:
-                    switch (item.ToString())
+                    switch (itemType)
                     {
                         // empty = ☼
                         case "MarsLib.MarsEmpty":
@@ -88,7 +91,7 @@ namespace MarsLib
                             break;
                         // rover = @
                         case "MarsLib.MarsRover":
-                            Console.Write("@", colour);
+                            Console.Write(item.ToString(), colour);
                             break;
                         // block = #
                         case "MarsLib.MarsBlock":

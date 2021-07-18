@@ -22,5 +22,20 @@ namespace MarsLib
         public int Y { get ; set ; } = 0;
 
         public bool IsEmpty  { get; set ; } = true;
+
+        public override string ToString()
+        {
+            switch (Direction)
+            {
+                case FacingDirection.North:
+                    return "↑";
+                case FacingDirection.South:
+                    return "↓";
+                case FacingDirection.East:
+                    return "→";
+                default:
+                    return "←";
+            }
+        }
     }
 }
